@@ -1,7 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">MadarSoftTask</string>
-    <string name="add_user">Add User</string>
-    <string name="view_users">View Users</string>
+    <string name="add_user">إضافة مستخدم</string>
+    <string name="view_users">عرض المستخدمين</string>
     <string name="label_name">name</string>
     <string name="label_age">age</string>
     <string name="label_job_title">job title</string>

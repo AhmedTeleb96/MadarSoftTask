@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/purple_500">
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/color_f5f5f5"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            android:overScrollMode="never"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelineStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="@dimen/_24sdp" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelineEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_end="@dimen/_24sdp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/fullNameInputLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:gravity="start"
+                    android:textAlignment="viewStart"
+                    android:textColorHint="@color/grey"
+                    app:boxBackgroundMode="filled"
+                    app:counterEnabled="false"
+                    app:layout_constraintBottom_toTopOf="@+id/ageInputLayout"
+                    app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_fullName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/color_f5f5f5"
+                        android:hint="@string/label_name"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:textColor="@color/color_0f183e"
+                        android:textSize="@dimen/_16sdp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ageInputLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:gravity="start"
+                    android:textAlignment="viewStart"
+                    android:textColorHint="@color/grey"
+                    app:boxBackgroundMode="filled"
+                    app:counterEnabled="false"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                    app:layout_constraintTop_toBottomOf="@+id/fullNameInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_age"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/color_f5f5f5"
+                        android:hint="@string/label_age"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:textColor="@color/color_0f183e"
+                        android:textSize="@dimen/_16sdp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/jobTitleInputLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:gravity="start"
+                    android:textAlignment="viewStart"
+                    android:textColorHint="@color/grey"
+                    app:boxBackgroundMode="filled"
+                    app:counterEnabled="false"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                    app:layout_constraintTop_toBottomOf="@+id/ageInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_jobTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/color_f5f5f5"
+                        android:hint="@string/label_job_title"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:textColor="@color/color_0f183e"
+                        android:textSize="@dimen/_16sdp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/textview_gender"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_gender"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:textColor="@color/color_0f183e"
+                    android:textSize="@dimen/_16sdp"
+                    app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                    app:layout_constraintTop_toBottomOf="@+id/jobTitleInputLayout"
+                    />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chip_group_gender"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:singleSelection="true"
+                    android:clickable="true"
+                    app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_gender"
+                    android:focusable="true"
+                    >
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/male"
+                        android:textSize="@dimen/_12sdp"
+                        android:checkable="true"
+                        android:textColor="@color/color_0f183e"
+                        />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/female"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:textSize="@dimen/_12sdp"
+                        android:checkable="true"
+                        android:textColor="@color/color_0f183e"
+                        />
+
+                </com.google.android.material.chip.ChipGroup>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_addUser"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:text="@string/add_user"
+                    app:cornerRadius="@dimen/_12sdp"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/_14sdp"
+                    android:backgroundTint="@color/color_0f183e"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                     />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
